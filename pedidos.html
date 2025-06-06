@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Pedidos</title>
+  <link rel="stylesheet" href="style.css" />
+   <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff8eb;
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 20px;
+       min-height: 100vh;
+    }
+    html, body {
+      height: 100%;
+      background-color: #fff8eb;
+    }
+    h1 {
+      text-align: center;
+      color: #1D2D44;
+      font-size: 2.5rem;
+    }
+
+    .mensagem-vazia {
+      text-align: center;
+      color: #1D2D44;
+      font-size: 1.1rem;
+    }
+
+    .pedido-card {
+      background-color: #f1f1f1;
+      margin: 30px auto;
+      max-width: 800px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .pedido-data {
+      color: #1D2D44;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .produto-item {
+      display: flex;
+      align-items: center;
+      background-color: #3E5C76;
+      color: #fff8eb;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .produto-item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .produto-info h6 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .produto-info span {
+      font-size: 0.9rem;
+      display: block;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meus Pedidos</h1>
+  <div id="containerPedidos">
+    <p class="mensagem-vazia">Carregando pedidos...</p>
+  </div>
+
+  <script type="module" src="pedidos.js"></script>
+</body>
+</html>

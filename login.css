@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background-color: #fdf8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #0a1b42;
+  margin-bottom: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+}
+
+.login-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 330px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  font-size: 1.1em;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px;
+  background-color: #0b5f52;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+}
+
+button:hover {
+  background-color: #08483f;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.register-link a {
+  color: #0b5f52;
+  text-decoration: underline;
+}
