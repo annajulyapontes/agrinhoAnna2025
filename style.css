@@ -13,7 +13,7 @@ body {
 }
 /* Cabeçalho e logo */
 .logo-container {
-  background-color: #3E5C76;
+  background-color: #9fbb9c;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@ body {
 
 /* Navbar principal */
 .bg-topo {
-  background-color: #1D2D44;
+  background-color: #266829;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -104,7 +104,7 @@ body {
 .secao-produtos h3 {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  color: #1D2D44;
+  color: #266829;
   margin-bottom: 30px;
   font-size: 2.3rem;
   font-weight: 600;
@@ -130,7 +130,7 @@ body {
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s ease;
-  background-color: #1D2D44;
+  background-color: #266829;
 }
 .card:hover {
   transform: translateY(-5px);
@@ -185,7 +185,7 @@ body {
   background-color: #3E5C76;
 }
 .barra-categorias {
-  background-color: #1D2D44;
+  background-color: #266829;
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
   margin-top: 0;
@@ -238,7 +238,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 #carrinhoTopo {
-  background-color: #1D2D44;
+  background-color: #266829;
   color: white;
   padding: 16px;
   font-size: 1.3rem;
@@ -263,7 +263,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  background: #3E5C76;
+  background: #266829;
   padding: 12px;
   border-radius: 12px;
   margin-bottom: 10px;
@@ -406,7 +406,7 @@ body {
 }
 
 .menu-lateral a:hover {
-  color: #3E5C76;
+  color: #69ac6b;
   transform: translateX(5px);
 }
 
@@ -414,7 +414,7 @@ body {
   font-size: 1.5rem;
 }
 #menuLateral {
-  background-color: #1D2D44 !important;
+  background-color: #266829 !important;
 }
 .offcanvas-title {
   font-size: 1.1rem;
