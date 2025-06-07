@@ -344,7 +344,7 @@ body {
   flex-direction: column;
   gap: 10px;
   padding: 0 15px 15px;
-  color: #9fbb9c;
+  color: #266829;
 }
 
 .botoes-carrinho .btn {
@@ -356,7 +356,7 @@ body {
 }
 /* Botão do site (verde) */
 .botoes-carrinho .btn-success {
-  background-color: #9fbb9c; 
+  background-color: #266829; 
   border: none;
   color: white;
 }
@@ -383,7 +383,7 @@ body {
 }
 #contadorCarrinho {
   background-color: white; 
-  color: #3E5C76;              
+  color: #266829;              
   font-size: 0.75rem;
   padding: 4px 6px;
   min-width: 20px;
@@ -434,7 +434,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #1D2D44;
+  background-color: #266829;
   color: #fff8eb;
   padding: 16px 20px;
   border-radius: 8px;
@@ -481,7 +481,7 @@ body.offcanvas-backdrop {
 .secao-promocoes h3 {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  color: #1D2D44;
+  color: #266829;
 }
 
 #carouselPromocoes {
