@@ -344,7 +344,7 @@ body {
   flex-direction: column;
   gap: 10px;
   padding: 0 15px 15px;
-  color: #1D2D44;
+  color: #9fbb9c;
 }
 
 .botoes-carrinho .btn {
@@ -356,7 +356,7 @@ body {
 }
 /* Botão do site (verde) */
 .botoes-carrinho .btn-success {
-  background-color: #1D2D44; 
+  background-color: #9fbb9c; 
   border: none;
   color: white;
 }
