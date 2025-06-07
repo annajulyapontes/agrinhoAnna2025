@@ -51,7 +51,7 @@ input {
 
 button {
   padding: 12px;
-  background-color: #0b5f52;
+  background-color: #266829;
   color: white;
   border: none;
   font-size: 1rem;
@@ -62,7 +62,7 @@ button {
 }
 
 button:hover {
-  background-color: #08483f;
+  background-color: #439747;
 }
 
 .register-link {
@@ -71,6 +71,6 @@ button:hover {
 }
 
 .register-link a {
-  color: #0b5f52;
+  color: #266829;
   text-decoration: underline;
 }
