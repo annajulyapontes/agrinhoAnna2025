@@ -25,4 +25,4 @@ Promover, de forma interativa e educativa, o valor dos produtos do campo, destac
 * Fotos dos produtos: Todas as imagens foram tiradas pessoalmente por mim, **Anna Julya Pontes**.
 * Logo Agrinho 2025: Gerada com o auxílio de Inteligência Artificial (IA), seguindo o tema do programa.
 
-📌 **Este projeto é para o Agrinho 2025**
+###📌 **Este projeto é para o Agrinho 2025**
