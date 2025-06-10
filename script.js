@@ -136,8 +136,8 @@ function atualizarCarrinho() {
   if (carrinho.length === 0) {
     div.innerHTML = `
       <div style="text-align: center; padding: 40px;">
-        <i class="bi bi-emoji-frown" style="font-size: 60px; color: #1D2D44; margin-bottom: 10px;"></i>
-        <div style="font-size: 1.2rem; font-weight: bold; color: #1D2D44;">Seu carrinho está vazio</div>
+        <i class="bi bi-emoji-frown" style="font-size: 60px; color: #266829; margin-bottom: 10px;"></i>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #266829;">Seu carrinho está vazio</div>
         <div style="font-size: 0.9rem; color: #555;">Adicione produtos para começar sua compra!</div>
       </div>
     `;
