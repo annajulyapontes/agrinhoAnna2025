@@ -40,7 +40,7 @@ const pedidoHTML = `
         </div>
       </div>
     `).join("")}
-    <div style="text-align: right; margin-top: 10px; font-weight: bold; color: #1D2D44;">
+    <div style="text-align: right; margin-top: 10px; font-weight: bold; color: white;">
       Total do pedido: R$ ${total}
     </div>
   </div>

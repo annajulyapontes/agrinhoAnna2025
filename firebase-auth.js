@@ -42,12 +42,12 @@ if (registerForm) {
       pedidos: []
 });
 
-    mostrarToastPixLike("Usuário cadastrado com sucesso!", "#1D2D44");
+    mostrarToastPixLike("Usuário cadastrado com sucesso!", "#266829");
       setTimeout(() => {
         window.location.href = redirect === "pedidos" ? "pedidos.html" : "index.html";
       }, 3000);
     } catch (error) {
-     mostrarToastPixLike("Erro ao cadastrar: " + traduzErroFirebase(error), "#1D2D44");
+     mostrarToastPixLike("Erro ao cadastrar: " + traduzErroFirebase(error), "#266829");
     }
   });
 }
@@ -67,7 +67,7 @@ if (loginForm) {
         window.location.href = redirect === "pedidos" ? "pedidos.html" : "index.html";
       }, 3000);
     } catch (error) {
-    mostrarToastPixLike("Erro ao fazer login: " + traduzErroFirebase(error), "#1D2D44");
+    mostrarToastPixLike("Erro ao fazer login: " + traduzErroFirebase(error), "#266829");
     }
   });
 }

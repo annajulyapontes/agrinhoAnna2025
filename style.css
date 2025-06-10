@@ -322,6 +322,7 @@ body {
 
 .carrinho-total {
   font-family: 'Quicksand', sans-serif;
+  color: #9fbb9c;
   font-weight: 700;
   font-size: 1.2rem;
   margin: 15px 0;
@@ -356,7 +357,7 @@ body {
 }
 /* Botão do site (verde) */
 .botoes-carrinho .btn-success {
-  background-color: #266829; 
+  background-color: #9fbb9c; 
   border: none;
   color: white;
 }

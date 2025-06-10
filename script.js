@@ -200,7 +200,7 @@ async function finalizarCompraSite() {
   }
   // ✅ INSIRA ESTA VERIFICAÇÃO LOGO AQUI:
   if (carrinho.length === 0) {
-    mostrarToastPixLike("Seu carrinho está vazio. Adicione algum produto antes de finalizar a compra!", "#3E5C76");
+    mostrarToastPixLike("Seu carrinho está vazio. Adicione algum produto antes de finalizar a compra!", "#266829");
     return;
   }
 
@@ -226,14 +226,14 @@ async function finalizarCompraSite() {
     atualizarCarrinho();
   } catch (error) {
     console.error("Erro ao salvar pedido:", error);
-    mostrarToastPixLike("Erro ao registrar o pedido. Tente novamente.", "#3E5C76");
+    mostrarToastPixLike("Erro ao registrar o pedido. Tente novamente.", "#266829");
   }
 }
 async function finalizarCompraWhatsapp() {
   const user = auth.currentUser;
 
   if (!user) {
-    mostrarToastPixLike("Você precisa estar logado para finalizar a compra.", "#3E5C76");
+    mostrarToastPixLike("Você precisa estar logado para finalizar a compra.", "#266829");
      setTimeout(() => {
     window.location.href = "login.html";
   }, 2500);
@@ -241,7 +241,7 @@ async function finalizarCompraWhatsapp() {
   }
   // ✅ BARRAR CARRINHO VAZIO:
   if (carrinho.length === 0) {
-    mostrarToastPixLike("Seu carrinho está vazio. Adicione algum produto antes de finalizar a compra!", "#D9534F");
+    mostrarToastPixLike("Seu carrinho está vazio. Adicione algum produto antes de finalizar a compra!", "#266829");
     return;
   }
 
@@ -568,16 +568,16 @@ window.copiarCodigoPix = function () {
   const textarea = document.getElementById("codigoPix");
   navigator.clipboard.writeText(textarea.value)
     .then(() => {
-      mostrarToastPixLike("Código Pix copiado! Após a confirmação do pagamento, seu pedido será preparado.", "#1D2D44");
+      mostrarToastPixLike("Código Pix copiado! Após a confirmação do pagamento, seu pedido será preparado.", "#266829");
     })
     .catch(err => {
       console.error("Erro ao copiar:", err);
-      mostrarToastPixLike("Erro ao copiar o código Pix.", "#d9534f");
+      mostrarToastPixLike("Erro ao copiar o código Pix.", "#266829");
     });
 };
 
 
-export function mostrarToastPixLike(mensagem = "Algo aconteceu!", cor = "#0d6efd") {
+export function mostrarToastPixLike(mensagem = "Algo aconteceu!", cor = "#266829") {
   // Remove se já existir para não duplicar
   const existente = document.getElementById("toastPixGlobal");
   if (existente) existente.remove();

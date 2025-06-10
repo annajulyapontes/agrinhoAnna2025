@@ -38,7 +38,7 @@ setPersistence(auth, browserLocalPersistence).then(() => {
 async function salvarPedidoFirestore(pedido) {
   const user = auth.currentUser;
   if (!user) {
-    mostrarToastPixLike("Você precisa estar logado.", "#1D2D44");
+    mostrarToastPixLike("Você precisa estar logado.", "#266829");
      setTimeout(() => {
         window.location.href = redirect === "pedidos" ? "pedidos.html" : "index.html";
       }, 3000);
