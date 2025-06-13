@@ -6,13 +6,13 @@ import { mostrarToastPixLike } from './script.js';
 
 // CONFIGURAÇÃO DO FIREBASE
 const firebaseConfig = {
-  apiKey: "AIzaSyBDFf0J1h_RGEjEwsDJjciy1i_7Ogfh6og",
-  authDomain: "projeto-talento-tech.firebaseapp.com",
-  projectId: "projeto-talento-tech",
-  storageBucket: "projeto-talento-tech.firebasestorage.app",
-  messagingSenderId: "259096245135",
-  appId: "1:259096245135:web:8620461b75fbee341551fa",
-  measurementId: "G-020N00975M"
+ apiKey: "AIzaSyBFRGf1SR2YZl3gZ2WZyz9XCHO-iZbuS7I",
+  authDomain: "agrinhoanna2025.firebaseapp.com",
+  projectId: "agrinhoanna2025",
+  storageBucket: "agrinhoanna2025.firebasestorage.app",
+  messagingSenderId: "1043257689981",
+  appId: "1:1043257689981:web:e47f45da77879ee58dae14",
+  measurementId: "G-2449L99B2V"
 };
 
 // INICIALIZA
