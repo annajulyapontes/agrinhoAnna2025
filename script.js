@@ -82,7 +82,7 @@ function renderizarProdutos() {
               <input type="number" id="qtd-${index}" class="form-control text-center" value="1" min="1">
               <button class="btn btn-outline-secondary" onclick="alterarQuantidade(${index}, 1)">+</button>
             </div>
-            <button class="btn btn-primary w-100" onclick="adicionarCarrinho(${index})">Adicionar ao Carrinho</button>
+           <button class="btn btn-adicionar w-100" onclick="adicionarCarrinho(${index})">Adicionar ao Carrinho</button>
           </div>
         </div>
       </div>`;
@@ -136,9 +136,9 @@ function atualizarCarrinho() {
   if (carrinho.length === 0) {
     div.innerHTML = `
       <div style="text-align: center; padding: 40px;">
-        <i class="bi bi-emoji-frown" style="font-size: 60px; color: #266829; margin-bottom: 10px;"></i>
-        <div style="font-size: 1.2rem; font-weight: bold; color: #266829;">Seu carrinho está vazio</div>
-        <div style="font-size: 0.9rem; color: #555;">Adicione produtos para começar sua compra!</div>
+        <i class="bi bi-emoji-frown" style="font-size: 60px; color: #053208; margin-bottom: 10px;"></i>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #053208;">Seu carrinho está vazio</div>
+        <div style="font-size: 0.9rem; color: #053208;">Adicione produtos para começar sua compra!</div>
       </div>
     `;
   } else {
@@ -192,13 +192,12 @@ async function finalizarCompraSite() {
   const user = auth.currentUser;
 
   if (!user) {
-   mostrarToastPixLike("Você precisa estar logado para finalizar a compra.", "#3E5C76");
+   mostrarToastPixLike("Você precisa estar logado para finalizar a compra.", "#266829");
     setTimeout(() => {
     window.location.href = "login.html";
   }, 2500);
     return;
   }
-  // ✅ INSIRA ESTA VERIFICAÇÃO LOGO AQUI:
   if (carrinho.length === 0) {
     mostrarToastPixLike("Seu carrinho está vazio. Adicione algum produto antes de finalizar a compra!", "#266829");
     return;

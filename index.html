@@ -59,12 +59,13 @@
         <li><a href="#artesanais"><i class="bi bi-basket me-2"></i>Produtos Artesanais</a></li>
         <li><a href="#promocoesDoDia"><i class="bi bi-tag-fill me-2"></i>Promoções do Dia</a></li>
         <li><a href="#pedidos.html"><i class="bi bi-receipt-cutoff me-2"></i>Pedidos</a></li>
+        <li><a href="#sobre"><i class="bi bi-info-circle-fill me-2"></i>Sobre o Projeto</a></li>
+        <li><a href="#contato"><i class="bi bi-send-fill me-2"></i>Contato</a></li>
       </ul>
     </div>
     
   </div>
 
-  <!-- Logo e título -->
   <div class="logo-container flex-column text-center p-0">
     <br></br>
     <br>
@@ -72,7 +73,6 @@
     <br>
   </div>
   
-  <!-- Barra de Categorias -->
 <div class="barra-categorias">
   <div class="container d-flex justify-content-center gap-4">
     <a class="categoria-link" href="#frutas">Frutas</a>
@@ -128,7 +128,7 @@
     </div>
     <div class="botoes-carrinho">
       <button class="btn btn-success" onclick="finalizarCompraSite()">Pagar por Pix</button>
-      <a id="btnWhatsapp" class="btn btn-primary" target="_blank" onclick="finalizarCompraWhatsapp()">Finalizar pelo WhatsApp</a>
+      <button class="btn btn-whatsapp" target="_blank" onclick="finalizarCompraWhatsapp()">Finalizar pelo WhatsApp</button>
     </div>
   </div>
 </div>
@@ -148,7 +148,6 @@
     });
   </script>
 
-<!-- Modal do Pix -->
 <div class="modal fade" id="modalPix" tabindex="-1" aria-labelledby="modalPixLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="background: #fff8eb; font-family: 'Quicksand', sans-serif;">
@@ -166,6 +165,71 @@
     </div>#9fbb9c
   </div>
 </div>
+
+<section id="sobre" class="secao-sobre">
+  <div class="conteudo-sobre">
+    <h2 class="titulo-sobre">Armazém Campo & Cidade</h2>
+    <p>
+      O Armazém Campo & Cidade foi criado do desejo de aproximar dois mundos que se completam: o campo, onde tudo começa com o cuidado da terra e das mãos trabalhadoras, e a cidade, onde há consumidores em busca de produtos frescos, caseiros e cheios de história.
+    </p>
+    <p>
+      Com o apoio da tecnologia, criei uma loja virtual simples e acessível, onde produtos artesanais, frutas, verduras e legumes ganham destaque e chegam diretamente à sua mesa. Aqui, cada pedido é também uma forma de valorizar quem cultiva, prepara e acredita no poder do campo.
+    </p>
+    <p>
+      Nossa missão é celebrar essa conexão, incentivando a produção local, o consumo consciente e a união entre quem planta com amor e quem valoriza qualidade de verdade.
+    </p>
+
+    <h2 class="subtitulo-sobre">Por que esse projeto importa?</h2>
+    <p>
+      Este projeto é mais do que uma loja: é uma ponte entre a educação, o trabalho no campo e a vida na cidade. Ao comprar no Armazém Campo & Cidade, você:
+    </p>
+    <ul class="lista-sobre">
+      <li> Valoriza o pequeno produtor rural e sua história de vida.</li>
+      <li> Incentiva o consumo de alimentos frescos e saudáveis.</li>
+      <li> Estimula o uso responsável da tecnologia no campo.</li>
+      <li> Fortalece a economia local e a agricultura familiar.</li>
+      <li> Participa de uma experiência educativa e cidadã, proposta pelo Agrinho 2025.</li>
+    </ul>
+    <p>
+      Festejar a conexão entre o campo e a cidade é reconhecer o valor de cada etapa da produção e de cada pessoa envolvida. É plantar respeito, colher dignidade e compartilhar esperança!
+    </p>
+  </div>
+</section>
+  
+<section id="contato" class="secao-contato">
+  <div class="container-contato">
+    <div class="info-contato">
+      <h2>Podemos nos conectar</h2>
+      <p>Os contatos abaixo são para tirar dúvidas ou saber mais sobre meus projetos no GitHub.</p>
+      <div class="icones-contato-lateral">
+        <a href="https://wa.me/5543998100215" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://github.com/annajulyapontes" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://instagram.com/annajulyapontes" target="_blank"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="formulario-contato">
+      <h2>Quer conversar comigo?</h2>
+      <p>Se quiser trabalhar comigo em algum projeto ou fazer uma parceria, é só me enviar uma mensagem!</p>
+      <form action="mailto:annajulyapontes88@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+        <textarea name="mensagem" placeholder="Escreva sua mensagem aqui..." rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="rodape-institucional">
+  <br></br>
+  <p>DESENVOLVIDO POR ANNA JULYA PONTES - AGRINHO 2025</p>
+  <p>TODOS OS DIREITOS RESERVADOS</p>
+  <br>
+</div>
+
+</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </script>
 

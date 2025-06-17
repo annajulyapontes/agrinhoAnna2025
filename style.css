@@ -151,6 +151,27 @@ body {
   text-align: center;
   margin-bottom: 1rem;
 }
+.btn-adicionar {
+  background-color: #6abc61;  
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-adicionar:hover {
+  background-color: #416c3c;
+}
+.btn-whatsapp {
+  background-color: #266829; 
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-whatsapp:hover {
+  background-color: #164618; 
+}
+
 .input-group {
   display: flex;
   justify-content: center;
@@ -176,13 +197,13 @@ body {
   color: #fff8eb;
 }
 .btn-primary {
-  background-color: #266829 ;
+  background-color: #6abc61 ;
   border: none;
   font-weight: 600;
   color: #fff8eb;
 }
 .btn-primary:hover {
-  background-color: #439747;
+  background-color: #416c3c;
 }
 .barra-categorias {
   background-color: #266829;
@@ -322,7 +343,7 @@ body {
 
 .carrinho-total {
   font-family: 'Quicksand', sans-serif;
-  color: #9fbb9c;
+  color: #053208;
   font-weight: 700;
   font-size: 1.2rem;
   margin: 15px 0;
@@ -357,7 +378,7 @@ body {
 }
 /* Botão do site (verde) */
 .botoes-carrinho .btn-success {
-  background-color: #9fbb9c; 
+  background-color: #0a4b0e; 
   border: none;
   color: white;
 }
@@ -435,7 +456,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #9fbb9c;
+  background-color: #266829;
   color: #fff8eb;
   padding: 16px 20px;
   border-radius: 8px;
@@ -595,12 +616,175 @@ body.offcanvas-backdrop {
     word-break: break-word; 
   }
    #promocoesDoDia {
-    padding: 0 0.3rem; /* menos espaço nas bordas no celular */
+    padding: 0 0.3rem; 
   }
 
   #promocoesDoDia .card {
-    width: calc(90vw - 1rem); /* ocupa quase toda a largura da tela */
+    width: calc(90vw - 1rem);
     margin: 0 auto;
   }
 }
 
+.secao-sobre {
+  background-color: #fdf8f0;
+  padding: 50px 20px;
+}
+
+.conteudo-sobre {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #282727;
+}
+
+.titulo-sobre {
+  color: #266829;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.subtitulo-sobre {
+  color: #266829;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.secao-sobre p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.lista-sobre {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #282727;
+  padding-left: 20px;
+}
+
+.secao-contato {
+  background-color: #fdf8f0;
+  padding: 20px 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container-contato {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.info-contato {
+  flex: 1;
+  min-width: 280px;
+  color: #266829;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.info-contato h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.info-contato p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.icones-contato-lateral a {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  color: #266829;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.icones-contato-lateral a:hover {
+  color: #6abc61;
+}
+
+@media (max-width: 768px) {
+  .container-contato {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icones-contato-lateral {
+    justify-content: center;
+  }
+}
+
+.formulario-contato {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #266829;
+}
+
+.formulario-contato h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #266829;
+  font-weight: 600;
+}
+
+.formulario-contato p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.formulario-contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.formulario-contato button {
+  padding: 12px;
+  background-color: #266829;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background-color: #439747;
+}
+.rodape-institucional {
+  background-color: #266829; 
+  color: white;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
