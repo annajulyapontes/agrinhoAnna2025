@@ -9,7 +9,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 import { mostrarToastPixLike } from './script.js';
 
-// Verifica redirecionamento após login
 const urlParams = new URLSearchParams(window.location.search);
 const redirect = urlParams.get("redirect");
 
@@ -37,7 +36,6 @@ if (registerForm) {
   registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // GARANTIA: usar getElementById se necessário
     const nome = document.getElementById("name").value.trim();
     const telefone = document.getElementById("phone").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -47,7 +45,6 @@ if (registerForm) {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Salva dados adicionais no Firestore
       await setDoc(doc(db, "usuarios", user.uid), {
         nome: nome,
         telefone: telefone,

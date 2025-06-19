@@ -62,7 +62,6 @@ function renderizarProdutos() {
   console.log("Função renderizarProdutos chamada");
   
   produtos.forEach((p, index) => {
-    // ⚠️ PULA produtos marcados como promoção
     if (p.emPromocao) return;
 
     const categoriaDiv = document.getElementById(p.categoria);
@@ -118,7 +117,6 @@ function adicionarCarrinho(index) {
 
   atualizarCarrinho();
 
-  // ✅ Animação no ícone do carrinho
   const icone = document.getElementById('btnCarrinho');
   if (icone) {
     icone.classList.add('animado');
@@ -170,7 +168,6 @@ function atualizarCarrinho() {
 
   document.getElementById('valorTotal').innerText = `R$ ${total.toFixed(2)}`;
 
-  // Atualiza contador visual no ícone do carrinho
   const contador = document.getElementById('contadorCarrinho');
   contador.innerText = totalItens;
   contador.style.display = totalItens > 0 ? 'inline-block' : 'none';
@@ -217,7 +214,7 @@ async function finalizarCompraSite() {
   };
 
   try {
-    await salvarPedidoFirestore(pedido); // salva no Firestore
+    await salvarPedidoFirestore(pedido);
     document.getElementById("valorPixModal").innerText = `R$ ${total.toFixed(2)}`;
     const modal = new bootstrap.Modal(document.getElementById('modalPix'));
     modal.show();
@@ -238,7 +235,7 @@ async function finalizarCompraWhatsapp() {
   }, 2500);
     return;
   }
-  // ✅ BARRAR CARRINHO VAZIO:
+
   if (carrinho.length === 0) {
     mostrarToastPixLike("Seu carrinho está vazio. Adicione algum produto antes de finalizar a compra!", "#266829");
     return;
@@ -260,7 +257,6 @@ async function finalizarCompraWhatsapp() {
     await salvarPedidoFirestore(pedido);
     console.log("Pedido salvo com sucesso no Firebase (WhatsApp)");
 
-    // 🔍 Busca dados do usuário
     const userRef = doc(db, "usuarios", user.uid);
     const userSnap = await getDoc(userRef);
     const userData = userSnap.exists() ? userSnap.data() : {};
@@ -269,7 +265,6 @@ async function finalizarCompraWhatsapp() {
     const whatsapp = userData.telefone;
     const email = user.email;
 
-    // 📦 Monta mensagem formatada
     let mensagem = `Olá, *${nome}*!\n\n`;
     mensagem += `*Nome:* ${nome}\n`;
     mensagem += `*Número de Telefone:* ${whatsapp}\n`;
@@ -283,21 +278,16 @@ async function finalizarCompraWhatsapp() {
 
     mensagem += `Total: R$${pedido.total.toFixed(2)}`;
 
-    // 🔗 Gera link
     const url = `https://wa.me/5543998100215?text=${encodeURIComponent(mensagem)}`;
 
-    // ✅ Limpa carrinho
     carrinho = [];
     atualizarCarrinho();
 
-    // 🔄 Abre o WhatsApp
-   // 🔄 Abre o WhatsApp (forçando o app em mobile)
 if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     window.location.href = `https://api.whatsapp.com/send?phone=5543998100215&text=${encodeURIComponent(mensagem)}`;
 } else {
     window.open(url, '_blank');
 }
-
 
   } catch (error) {
     console.error("Erro ao salvar o pedido:", error);
@@ -323,7 +313,6 @@ function renderizarPromocoesAleatorias() {
   const div = document.getElementById('promocoesDoDia');
   if (!div) return;
 
-  // Geração de seed fixa com base na data (ano + mês + dia)
   const hoje = new Date();
   const seed = hoje.getFullYear() * 10000 + (hoje.getMonth() + 1) * 100 + hoje.getDate();
 
@@ -365,7 +354,6 @@ function renderizarPromocoesAleatorias() {
 
   });
 
-  // Scroll limitado horizontal
   let scrollX = 0;
   const scrollStep = 270;
   const container = document.getElementById('promocoesDoDia');
@@ -389,12 +377,10 @@ function renderizarPromocoesAleatorias() {
 }
 
  atualizarCarrinho();
- renderizarPromocoesAleatorias(); // primeiro, define os emPromocao = true
- renderizarProdutos();            // depois, gera só os que NÃO estão em promoção
+ renderizarPromocoesAleatorias(); 
+ renderizarProdutos();            
 
 
-
-  // Categorias
   document.querySelectorAll('.categoria-link').forEach(link => {
     link.addEventListener('click', function () {
       document.querySelectorAll('.categoria-link').forEach(l => l.classList.remove('active'));
@@ -402,7 +388,6 @@ function renderizarPromocoesAleatorias() {
     });
   });
 
-  // Busca
   const lupaBtn = document.getElementById('btnLupa');
   const campoBusca = document.getElementById('campoBusca');
   if (lupaBtn && campoBusca) {
@@ -420,7 +405,6 @@ function renderizarPromocoesAleatorias() {
     });
   }
 
-  // Carrinho
   const btnCarrinho = document.getElementById('btnCarrinho');
   if (btnCarrinho) {
     btnCarrinho.addEventListener('click', () => {
@@ -428,7 +412,6 @@ function renderizarPromocoesAleatorias() {
     });
   }
 
-  // Menu lateral
   const abrirMenu = document.getElementById('abrirMenu');
   if (abrirMenu) {
     abrirMenu.addEventListener('click', function () {
@@ -446,12 +429,10 @@ document.querySelectorAll('.menu-lateral a').forEach(link => {
     if (offcanvasInstance) {
       offcanvasInstance.hide();
 
-      // Aguarda o evento de fechamento completo
-      menuElement.addEventListener('hidden.bs.offcanvas', function handler() {
-        // Remove este listener depois de rodar
+        menuElement.addEventListener('hidden.bs.offcanvas', function handler() {
+        
         menuElement.removeEventListener('hidden.bs.offcanvas', handler);
 
-        // ✅ Remove backdrop manualmente
         const backdrop = document.querySelector('.offcanvas-backdrop');
         if (backdrop) {
           backdrop.remove();
@@ -469,7 +450,7 @@ document.querySelectorAll('.menu-lateral a').forEach(link => {
         }
       });
     } else {
-      // Caso não esteja no offcanvas, redireciona direto
+
       if (destino && destino.startsWith('#')) {
         const alvo = document.querySelector(destino);
         if (alvo) {
@@ -530,7 +511,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const btnLogin = document.getElementById('btnLogin');
   const pedidosLink = document.querySelector('a[href*="pedidos"]');
 
-  // Atualiza visual do botão Login
   onAuthStateChanged(auth, (user) => {
     if (btnLogin) {
       if (user) {
@@ -540,7 +520,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Configura clique no botão "Pedidos"
     if (pedidosLink) {
       pedidosLink.addEventListener('click', (e) => {
         e.preventDefault();
@@ -553,7 +532,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Clique no botão Login vai sempre para login.html
   if (btnLogin) {
     btnLogin.addEventListener('click', () => {
       window.location.href = 'login.html';
@@ -577,11 +555,10 @@ window.copiarCodigoPix = function () {
 
 
 export function mostrarToastPixLike(mensagem = "Algo aconteceu!", cor = "#266829") {
-  // Remove se já existir para não duplicar
+
   const existente = document.getElementById("toastPixGlobal");
   if (existente) existente.remove();
 
-  // Cria o container do toast
   const toast = document.createElement("div");
   toast.id = "toastPixGlobal";
   toast.style.position = "fixed";
@@ -604,14 +581,11 @@ export function mostrarToastPixLike(mensagem = "Algo aconteceu!", cor = "#266829
 
   document.body.appendChild(toast);
 
-  // Remove após 3 segundos
   setTimeout(() => {
     toast.remove();
   }, 3000);
 }
 
-
-// Torna as funções disponíveis globalmente
 window.adicionarCarrinho = adicionarCarrinho;
 window.alterarQuantidade = alterarQuantidade;
 window.atualizarCarrinho = atualizarCarrinho;
